@@ -5,3 +5,27 @@
 .copied{
     display: none;
 }
+
+.check input:checked::after{
+    content: "\2713";
+    position: absolute;
+    top: -5px;
+    text-align: center;
+    font-weight: 600;
+    
+
+}
+
+#sliderrange::-webkit-slider-thumb{
+    appearance: none;
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 100%;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+#sliderrange::-webkit-slider-thumb:hover{
+    background-color: black;
+    border: 2px solid yellow;
+}

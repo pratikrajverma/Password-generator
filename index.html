@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="h-[100vh] bg-gradient-to-r from-[#6a1b89] to-[#2a0738] flex justify-center items-center">
+    <div class="h-[100vh] bg-gradient-to-r from-[#6a1b89] to-[#2a0738] flex justify-center items-center select-none">
         <div class=" flex flex-col gap-3 ">
             <h1 class="text-white font-bold px-2 text-center" gene>PASSWORD GENERATOR</h1>
 
 
 
-            <div class="flex items-center  border-yellow-400 border-b-2 bg-black text-yellow-400 rounded gap-3 h-8 px-3">
-                <input readonly placeholder="Password " type="text" class="w-full rounded bg-black text-yellow-400 px-2 font-semibold " password_dis >
+            <div class="flex items-center  border-yellow-400 border-b-2 bg-black rounded gap-3 h-8 px-3">
+                <input readonly placeholder="Password " type="text" class="w-full rounded bg-black text-yellow-400 px-2 font-semibold placeholder:text-yellow-400" password_dis >
 
                 <button onclick="copyed_btn()" class="relative">
                         <img src="./copy.svg" class="h-5">
@@ -22,7 +22,8 @@
                 </button>
             </div>
 
-
+            <!-- slider range -->
+            
                 
             <div class=" flex flex-col gap-4 p-3 bg-[#3c1c4e] box-border rounded-md">
                 <div class="flex justify-between">
@@ -30,24 +31,24 @@
                     <p class="text-white text-yellow-400" sliderdisplay>0</p>
                 </div> 
                 
-                <input type="range"  min="0" max="20"  class="w-full h-2 range-track dark:bg-purple-500 range-thumb bg-yellow-400 appearance-none" onscroll="sliderhandler()" sliderrange>
+                <input type="range"  min="0" max="20"  class="w-full h-3  appearance-none   bg-black rounded  slider active:border-yellow-400 active:border" id="sliderrange">
 
                 <!-- check box -->
-                <div class="flex flex-col text-white select-none">
-                    <div>                    
-                        <input type="checkbox" name="" id="Uppercase" class=""> 
+                <div class="flex flex-col text-white ">
+                    <div class="check">                    
+                        <input type="checkbox" name="" id="Uppercase" class="appearance-none h-4 w-4 rounded cursor-pointer border border-sky-500 relative checked:bg-sky-500"> 
                         <label for="Uppercase">Include Uppercase</label>
                     </div>
-                    <div>                    
-                        <input type="checkbox" name="" id="Lowercase"> 
+                    <div class="check">                    
+                        <input type="checkbox" name="" id="Lowercase" class="appearance-none h-4 w-4 rounded cursor-pointer border border-sky-500 relative checked:bg-sky-500"> 
                         <label for="Lowercase">Include Lowercase</label>
                     </div>
-                    <div>
-                        <input type="checkbox" name="" id="Number">
+                    <div class="check">
+                        <input type="checkbox" name="" id="Number" class="appearance-none h-4 w-4 rounded cursor-pointer border border-sky-500 relative checked:bg-sky-500">
                         <label for="Number"> Include Number</label>
                     </div>
-                    <div>                    
-                        <input type="checkbox" name="" id="Symbol"> 
+                    <div class="check">                    
+                        <input type="checkbox" name="" id="Symbol" class="appearance-none h-4 w-4 rounded cursor-pointer border border-sky-500 relative checked:bg-sky-500 "> 
                         <label for="Symbol">Include Symbol</label>
                     </div>
                 </div>

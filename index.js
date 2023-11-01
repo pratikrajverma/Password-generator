@@ -30,15 +30,20 @@ let passwordlength=10;
 // slider function
     
     let sliderdisplay=document.querySelector("[ sliderdisplay]");
-    let sliderrange=document.querySelector("[sliderrange]");
+    let sliderrange=document.querySelector("#sliderrange");
     
     sliderdisplay.textContent=passwordlength;
     sliderrange.addEventListener('input',()=>{
         sliderdisplay.innerHTML=sliderrange.value;
         passwordlength=sliderrange.value;        
+        
+        const max=sliderrange.max;
+        const backgroundSize = ((passwordlength * 100) / max) + "% 100%";
+        sliderrange.style.backgroundSize = backgroundSize;
     });
 
-
+   
+   
 
 
 
